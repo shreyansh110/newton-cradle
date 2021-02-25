@@ -23,7 +23,11 @@ createCanvas(1000,600)
  bob4=new Ball(424,350,21);
  bob5=new Ball(382,350,21);
 
-string=new Chain(handle.body,bob1.body,BallDiameter*2,0)
+string1=new Chain(handle.body,bob1.body,BallDiameter*0,0);
+string2=new Chain(handle.body,bob2.body,BallDiameter*0,0);
+string3=new Chain(handle.body,bob3.body,BallDiameter*0,0);
+string4=new Chain(handle.body,bob4.body,BallDiameter*0,0);
+string5=new Chain(handle.body,bob5.body,BallDiameter*0,0);
 }
 
 
@@ -37,10 +41,19 @@ bob2.display();
 bob3.display();
 bob4.display();
 bob5.display();
-string.display();
+string1.display();
+string2.display();
+string3.display();
+string4.display();
+string5.display();
+keyPressed();
 drawSprites();
-
-
-
-
 }
+function keyPressed(){
+  if(keyCode===32){
+  
+  Matter.Body.applyForce(bob1.body,bob1.body.position,{x:35,y:-35})
+  }
+  }
+
+
